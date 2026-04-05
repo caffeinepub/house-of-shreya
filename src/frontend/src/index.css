@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("/assets/fonts/PlayfairDisplay.woff2") format("woff2");
+  font-weight: 400 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("/assets/fonts/DMSans.woff2") format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* House of Shreya palette — dusty rose / blush */
+    --background: 0.928 0.027 5; /* #F6E3E6 blush pink */
+    --foreground: 0.2 0 0; /* #1F1F1F near-black */
+    --card: 1 0 0; /* #FFFFFF white */
+    --card-foreground: 0.2 0 0;
+    --popover: 1 0 0;
+    --popover-foreground: 0.2 0 0;
+    --primary: 0.52 0.085 10; /* #A65A6B dusty rose brand */
+    --primary-foreground: 1 0 0;
+    --secondary: 0.928 0.027 5; /* blush pink */
+    --secondary-foreground: 0.52 0.085 10;
+    --muted: 0.96 0.012 5; /* very light blush */
+    --muted-foreground: 0.5 0 0; /* #6B6B6B */
+    --accent: 0.62 0.09 10; /* #C97A86 button pink */
+    --accent-foreground: 1 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.88 0.022 5; /* soft blush border */
+    --input: 0.88 0.022 5;
+    --ring: 0.62 0.09 10;
+
+    /* Brand-specific tokens */
+    --brand: 0.52 0.085 10; /* dusty rose #A65A6B */
+    --brand-btn: 0.62 0.09 10; /* button #C97A86 */
+    --brand-btn-hover: 0.56 0.088 10; /* hover #B86A77 */
+    --brand-footer: 0.68 0.07 10; /* footer #D38E98 */
+    --blush: 0.928 0.027 5; /* hero bg #F6E3E6 */
+
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.145 0 0;
+    --sidebar-primary: 0.52 0.085 10;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.928 0.027 5;
+    --sidebar-accent-foreground: 0.2 0 0;
+    --sidebar-border: 0.88 0.022 5;
+    --sidebar-ring: 0.62 0.09 10;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "DMSans", system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "PlayfairDisplay", Georgia, serif;
+  }
+}
